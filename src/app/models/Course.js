@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongooseDelete = require('mongoose-delete');
 const Schema = mongoose.Schema;
 
 const course = new Schema({
@@ -6,9 +7,12 @@ const course = new Schema({
     description:{type:String},
     category:{type:String},
     img:{type:String},
+    videoId:{type:String},
     slug:{type:String},
-    createdTime:{type:Date,default:Date.now},
-    updatedTime:{type:Date,default:Date.now}
+},{
+    timestamps:true
 });
+
+course.plugin(mongooseDelete,{overrideMethods:true,deletedAt:true});
 
 module.exports=mongoose.model('Course', course,'Courses');

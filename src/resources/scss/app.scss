@@ -1,3 +1,26 @@
 @import 'var';
 
+body{
+    color: #333;
+}
 
+a{
+    text-decoration:none;
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1.2rem;
+}
+
+.pt{
+    padding-top: 10px;
+}
+
+.a-tag-need-space{
+    margin: 0 10px;
+}
+
+.select-box{
+    width: 200px;
+    margin: 0 10px;
+}

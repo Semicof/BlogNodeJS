@@ -1,0 +1,48 @@
+<div class="mt-4">
+  <h3>Course Detail</h3>
+  <form method="post" action="/courses/{{course.slug}}?_method=PUT">
+    <div class="mb-3">
+      <label for="name" class="form-label">Course name</label>
+      <input class="form-control" id="name" name="name" value="{{course.name}}"/>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Course description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+      >{{course.description}}</textarea>
+    </div>
+ <div class="mb-3">
+      <label for="videoId" class="form-label">Course videoId</label>
+      <input
+    
+        class="form-control"
+        id="videoId"
+        name="videoId"
+        value="{{course.videoId}}"
+      />
+    </div>
+     <div class="mb-3">
+      <label for="slug" class="form-label">Course slug</label>
+      <input
+    
+        class="form-control"
+        id="slug"
+        name="slug"
+        value="{{course.slug}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Course category</label>
+      <input
+    
+        class="form-control"
+        id="category"
+        name="category"
+        value="{{course.category}}"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Complete</button>
+  </form>
+</div>
